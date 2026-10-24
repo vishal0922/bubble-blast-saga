@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Player Support - Bubble Blast Saga</title>
+  <meta name="description" content="Official player support and help desk for Bubble Blast Saga. Get fast help with lives, in-app purchases, level troubleshooting, or contact our support team directly.">
+  <link rel="icon" type="image/png" href="assets/images/icons/star.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Bubbles -->
+  <div class="bubble-ambient-container">
+    <div class="ambient-bubble" style="width: 45px; height: 45px; left: 12%; background: rgba(255, 59, 128, 0.35); animation-duration: 19s;"></div>
+    <div class="ambient-bubble" style="width: 65px; height: 65px; left: 78%; background: rgba(139, 92, 246, 0.3); animation-duration: 23s;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="Bubble Blast Saga Logo" class="brand-icon">
+        <span class="brand-title">Bubble Blast Saga</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="terms.html" class="nav-link">Terms</a></li>
+        <li><a href="support.html" class="nav-link active">Support</a></li>
+        <li>
+          <a href="https://play.google.com/store/apps/details?id=com.bubbleshooter.saga" class="nav-btn" target="_blank" rel="noopener">
+            <span>Play Now</span> 🎮
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="policy-page">
+    <div class="container">
+      <div class="policy-header">
+        <h1>Player Support Center</h1>
+        <div class="policy-meta">
+          <span>💬 24/7 Player Assistance</span>
+          <span>⚡ Fast Support Resolution</span>
+        </div>
+      </div>
+
+      <!-- Action Cards -->
+      <div class="support-grid">
+        <div class="support-card">
+          <div class="support-icon">📧</div>
+          <h3>Direct Email Support</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;">
+            Have a question, feedback, or need help with a purchase? Email our dedicated support team directly.
+          </p>
+
+          <div class="copy-badge-box">
+            <span id="emailText">vlingayat0924@gmail.com</span>
+            <button class="btn-copy" id="copyBtn" onclick="copySupportEmail()">Copy</button>
+          </div>
+
+          <a href="mailto:vlingayat0924@gmail.com?subject=Bubble%20Blast%20Saga%20Support%20Request&body=Hello%20Bubble%20Blast%20Saga%20Team,%0A%0AMy%20Device%20Model:%20%0AAndroid%20Version:%20%0AIssue%20Description:%20%0A" class="btn-primary-play" style="width: 100%; justify-content: center; margin-top: 0.8rem;">
+            Send Email Now ✉️
+          </a>
+        </div>
+
+        <div class="support-card">
+          <div class="support-icon">🛡️</div>
+          <h3>Purchase & Account Inquiries</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;">
+            If you made an in-app purchase and coins or gems were not credited, Google Play allows instant verification.
+          </p>
+
+          <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: var(--radius-sm); margin: 1rem 0; width: 100%; text-align: left; font-size: 0.88rem; color: #cbd5e1;">
+            <strong>💡 Quick Tip:</strong> Please include your Google Play Order Number (formatted as <code>GPA.XXXX-XXXX-XXXX-XXXXX</code>) found in your purchase confirmation email.
+          </div>
+
+          <a href="https://support.google.com/googleplay/answer/2850369" target="_blank" rel="noopener" class="btn-secondary" style="width: 100%; justify-content: center;">
+            Google Play Help Guide ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Common Troubleshooting Accordion -->
+      <div style="margin-top: 4.5rem;">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-tag">Troubleshooting Guide</span>
+          <h2 class="section-title">Quick Fixes for Common Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>My lives are not regenerating. How can I fix this?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Lives regenerate automatically based on real-world time (1 life every 30 minutes). Please ensure your device's date and time are set to <strong>"Automatic" (Network-provided time)</strong>. Modifying your system clock forward or backward may disrupt the life countdown timer.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>I bought a booster pack or coins but didn't receive them.</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Ensure you have a stable internet connection. Restart the app; our Google Play Billing listener automatically synchronizes and delivers any pending unconsumed purchases on startup. If still missing, send your Google Play order ID to <a href="mailto:vlingayat0924@gmail.com" style="color: #38bdf8;">vlingayat0924@gmail.com</a> and we will manually credit your items immediately.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>The game has no sound or music.</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Check the in-game Settings menu (gear icon in the top right). Ensure both "Sound" and "Music" toggles are switched ON. Also check your phone's media volume (not just ringtone volume) and make sure "Do Not Disturb" mode is disabled.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>How do I clear or reset my game data?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              To start over from Level 1, go to your phone's <em>Settings &gt; Apps &gt; Bubble Blast Saga &gt; Storage &gt; Clear Storage / Clear Data</em>. Please note this permanently resets your level progress, coin balance, and boosters.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bubble Blast Saga. All rights reserved. <a href="index.html" style="color: #38bdf8;">Home</a> | <a href="privacy.html" style="color: #38bdf8;">Privacy Policy</a> | <a href="terms.html" style="color: #38bdf8;">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(item) {
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    function copySupportEmail() {
+      const email = document.getElementById('emailText').innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.innerText = 'Copied! ✓';
+        btn.style.background = '#10b981';
+        setTimeout(() => {
+          btn.innerText = 'Copy';
+          btn.style.background = '';
+        }, 2500);
+      });
+    }
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

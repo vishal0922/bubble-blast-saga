@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Blast Saga - The Ultimate Bubble Shooter Adventure</title>
+  <meta name="description" content="Play Bubble Blast Saga! Pop, match, and blast colorful bubbles across 200+ handcrafted puzzle levels. Free to play, offline ready, with exciting boosters and daily rewards!">
+  <meta name="keywords" content="bubble shooter, bubble blast saga, puzzle game, casual game, android bubble game, offline bubble shooter">
+  <meta name="author" content="Bubble Blast Saga Team">
+  <meta property="og:title" content="Bubble Blast Saga - Pop & Match Bubbles!">
+  <meta property="og:description" content="Match 3+ colorful bubbles, unlock explosive boosters, and conquer 200+ fun levels!">
+  <meta property="og:image" content="assets/images/hero_chick.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/images/icons/star.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Bubbles -->
+  <div class="bubble-ambient-container">
+    <div class="ambient-bubble" style="width: 40px; height: 40px; left: 8%; background: rgba(255, 59, 128, 0.4); animation-duration: 16s; animation-delay: 0s;"></div>
+    <div class="ambient-bubble" style="width: 70px; height: 70px; left: 22%; background: rgba(139, 92, 246, 0.35); animation-duration: 21s; animation-delay: 3s;"></div>
+    <div class="ambient-bubble" style="width: 50px; height: 50px; left: 75%; background: rgba(6, 182, 212, 0.35); animation-duration: 18s; animation-delay: 1.5s;"></div>
+    <div class="ambient-bubble" style="width: 35px; height: 35px; left: 88%; background: rgba(245, 158, 11, 0.4); animation-duration: 14s; animation-delay: 5s;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="Bubble Blast Saga Logo" class="brand-icon">
+        <span class="brand-title">Bubble Blast Saga</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#boosters" class="nav-link">Boosters</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="terms.html" class="nav-link">Terms</a></li>
+        <li><a href="support.html" class="nav-link">Support</a></li>
+        <li>
+          <a href="https://play.google.com/store/apps/details?id=com.bubbleshooter.saga" class="nav-btn" target="_blank" rel="noopener">
+            <span>Play Now</span> 🎮
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Version 1.0.0 Live on Google Play</span>
+          </div>
+
+          <h1 class="hero-title">
+            Pop, Match & Blast in <br>
+            <span class="highlight">Bubble Blast Saga!</span>
+          </h1>
+
+          <p class="hero-desc">
+            Aim your cannon, match 3 or more bubbly gems, and rescue adorable critters! Experience over 200 handcrafted levels, explosive power-ups, smooth physics, and unlimited offline fun.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://play.google.com/store/apps/details?id=com.bubbleshooter.saga" class="btn-primary-play" target="_blank" rel="noopener">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186a2.03 2.03 0 0 1-.61-.954V2.768c0-.36.14-.707.39-.954h.22zM15.207 13.414l2.457 2.457-11.41 6.467 8.953-8.924zm0-2.828L6.254 1.662l11.41 6.467-2.457 2.457zm1.414 1.414l3.197 1.812a1.5 1.5 0 0 0 0-2.614l-3.197 1.802z"/>
+              </svg>
+              <span>Download on Google Play</span>
+            </a>
+            <a href="#features" class="btn-secondary">
+              <span>See Game Features</span> ↓
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">200+</span>
+              <span class="stat-label">Challenging Levels</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Offline Playable</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">4.9 ★</span>
+              <span class="stat-label">Player Rating</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">Daily</span>
+              <span class="stat-label">Free Lucky Spin</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-blob-glow"></div>
+          <div class="hero-mascot-card">
+            <div class="floating-bubble-tag tag-1">
+              <img src="assets/images/icons/booster_fireball.png" width="22" height="22" alt="Fireball">
+              <span>Super Fireball!</span>
+            </div>
+            <img src="assets/images/hero_chick.png" alt="Bubble Blast Saga Mascot Chick" class="mascot-image">
+            <div class="floating-bubble-tag tag-2">
+              <img src="assets/images/icons/wheel.png" width="22" height="22" alt="Spin">
+              <span>Daily Lucky Wheel!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Game Highlights</span>
+          <h2 class="section-title">Packed With Excitement & Rewards</h2>
+          <p class="section-desc">Everything you love in a classic bubble shooter, elevated with modern visuals, responsive mechanics, and generous rewards.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/images/icons/star.png" alt="Levels Icon">
+            </div>
+            <h3>200+ Handcrafted Levels</h3>
+            <p>From breezy warmups to nail-biting puzzles. Explore diverse worlds with unique bubble patterns, obstacle gems, and rescue goals.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/images/icons/wheel.png" alt="Lucky Wheel">
+            </div>
+            <h3>Daily Spin & Free Rewards</h3>
+            <p>Spin the Lucky Wheel every 24 hours to win free coins, sparkling gems, and premium booster packs to help you crush tough stages.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/images/icons/heart.png" alt="Hearts Lives">
+            </div>
+            <h3>Generous Life System</h3>
+            <p>Automatic heart regeneration every 30 minutes, plus quick refills with gems or rewarded video boosts so the popping never stops.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/images/icons/chest.png" alt="Mystery Chest">
+            </div>
+            <h3>Zero Wi-Fi Required</h3>
+            <p>No internet? No problem! Enjoy full offline support on commutes, flights, and road trips. Your high scores and coins save locally.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boosters Section -->
+    <section class="boosters-section" id="boosters">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Arsenal & Power-Ups</span>
+          <h2 class="section-title">Devastating Power-Up Boosters</h2>
+          <p class="section-desc">Stuck on a tricky level? Unleash high-powered special bubbles to clear the board in a flash!</p>
+        </div>
+
+        <div class="boosters-grid">
+          <div class="booster-item">
+            <img src="assets/images/icons/booster_bomb.png" alt="Bomb Booster">
+            <h4>Bomb Bubble</h4>
+            <span>Explodes in a 3x3 radius to destroy any color</span>
+          </div>
+
+          <div class="booster-item">
+            <img src="assets/images/icons/booster_fireball.png" alt="Fireball Booster">
+            <h4>Fireball</h4>
+            <span>Pierces through all obstacles in a direct line</span>
+          </div>
+
+          <div class="booster-item">
+            <img src="assets/images/icons/booster_rainbow.png" alt="Rainbow Bubble">
+            <h4>Rainbow Ball</h4>
+            <span>Matches with any color cluster effortlessly</span>
+          </div>
+
+          <div class="booster-item">
+            <img src="assets/images/icons/booster_lightning.png" alt="Lightning Strike">
+            <h4>Lightning</h4>
+            <span>Zaps an entire horizontal row of bubbles</span>
+          </div>
+
+          <div class="booster-item">
+            <img src="assets/images/icons/booster_aim.png" alt="Aim Extension">
+            <h4>Laser Aim</h4>
+            <span>Extends predictive bounce trajectory for precision shots</span>
+          </div>
+
+          <div class="booster-item">
+            <img src="assets/images/icons/booster_plus5.png" alt="+5 Moves">
+            <h4>+5 Bubbles</h4>
+            <span>Adds 5 clutch bubbles when moves are running low</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Quick answers regarding gameplay, offline mode, and in-game economy.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>Is Bubble Blast Saga completely free to play?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! Bubble Blast Saga is 100% free to download and play. All levels can be beaten with skill and strategy. Optional in-game coins, gems, and booster packs can be purchased through Google Play Billing.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>Can I play without an active internet connection?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Absolutely! All 200+ puzzles are preloaded on your device. You can play completely offline anytime, anywhere. Internet is only required for optional rewarded video boosts and store purchases.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>How do Lives (Hearts) recharge?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              You start with a maximum of 5 lives. If you run out of moves on a level, you lose 1 life. Lives naturally recharge 1 heart every 30 minutes. You can also instantly refill all 5 lives using gems or by watching a short rewarded video!
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>What should I do if I change phones or lose my progress?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Your level progress, coin balance, and boosters are securely saved to your device. If you encounter any issues or need assistance, reach out to our team at <a href="mailto:vlingayat0924@gmail.com" style="color: #38bdf8;">vlingayat0924@gmail.com</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <img src="assets/images/logo.png" alt="Bubble Blast Saga" class="brand-icon">
+            <span class="brand-title">Bubble Blast Saga</span>
+          </a>
+          <p>The premier bubble shooter arcade experience. Aim, shoot, and pop your way to victory across colorful fantasy worlds.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#boosters">Boosters</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bubbleshooter.saga" target="_blank" rel="noopener">Google Play Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="app-ads.txt">AdMob app-ads.txt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Player Support</h4>
+          <ul>
+            <li><a href="support.html">Help & Support</a></li>
+            <li><a href="mailto:vlingayat0924@gmail.com">vlingayat0924@gmail.com</a></li>
+            <li><span>Response time: &lt; 24h</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bubble Blast Saga. All rights reserved. Built with love for bubble puzzle enthusiasts worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(item) {
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
